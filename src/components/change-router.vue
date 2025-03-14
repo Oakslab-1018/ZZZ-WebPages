@@ -25,7 +25,7 @@ const arr = ref([
 .nav {
   display: flex;
   flex-direction: column;
-  z-index: 4;
+  z-index: 3;
   height: 100vh;
 }
 .nav-li {

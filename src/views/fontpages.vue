@@ -34,9 +34,7 @@ import changerouter from '../components/change-router.vue'
 }
 .nav {
   position: fixed;
-  width: 100%;
-  padding-top: 380px;
-  padding-left: 1410px;
-  z-index: 3;
+  margin-top: 380px;
+  margin-left: 1370px;
 }
 </style>

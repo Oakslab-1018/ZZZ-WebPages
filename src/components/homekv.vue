@@ -20,7 +20,19 @@
     </div>
     <div class="home-kv-slogan">
       <img class="slogan-img" src="../assets/now.png" />
-      <p>canvas画布</p>
+      <div class="buttons">
+        <div id="dynamicIcon1">
+          <img src="../assets//dynamic-font/领.png" class="dn1" />
+          <img src="../assets/dynamic-font/30.png" class="dn2" />
+          <img src="../assets/dynamic-font/抽.png" class="dn3" />
+          <img src="../assets/dynamic-font/！.webp" class="dn4" />
+        </div>
+        <img src="../assets/buttons/download.webp" class="btn" />
+        <img src="../assets/buttons/cloud.webp" class="btn" />
+        <div id="dynamicIcon2">
+          <img src="../assets//dynamic-font/pc.webp" />
+        </div>
+      </div>
     </div>
     <div class="forlogin">
       <img src="../assets/login.png" />
@@ -78,6 +90,82 @@
 }
 .slogan-img {
   width: 800px;
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 580px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-right: 160px;
+
+  .btn {
+    width: 250px;
+    height: 70px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}
+
+#dynamicIcon1 {
+  display: flex;
+  padding: 5px;
+  position: absolute;
+  img {
+    width: 30px;
+    height: 27px;
+  }
+  .dn1 {
+    position: absolute;
+    right: 70px;
+    animation: moveUpDown 1.8s infinite;
+  }
+  .dn2 {
+    position: absolute;
+    right: 45px;
+    animation: moveUpDown 1.8s infinite;
+    animation-delay: 10ms;
+  }
+  .dn3 {
+    position: absolute;
+    right: 20px;
+    animation: moveUpDown 1.8s infinite;
+    animation-delay: 200ms;
+  }
+  .dn4 {
+    position: absolute;
+    right: 0;
+    animation: moveUpDown 1.8s infinite;
+    animation-delay: 300ms;
+  }
+}
+
+@keyframes moveUpDown {
+  //利用关键帧技术实现动画
+  0% {
+    top: 6px;
+  }
+  15% {
+    top: 0;
+  }
+  25% {
+    top: 6px;
+  }
+  100% {
+    top: 6px;
+  }
+}
+
+#dynamicIcon2 {
+  display: flex;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  img {
+    width: 80px;
+  }
 }
 
 .forlogin {
