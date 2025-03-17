@@ -1,11 +1,11 @@
 <template>
   <ul class="nav">
-    <li class="nav-li" v-for="item in arr">
+    <li class="nav-li" v-for="(item, index) in arr" :key="index"  @click="changeColor(index)">
       <div class="text">
         <p>{{ item.eng }}</p>
         <p>{{ item.cn }}</p>
       </div>
-      <div class="checkbox"></div>
+      <div class="checkbox" :class="{yellow:currentIndex===index}"></div>
     </li>
   </ul>
 </template>
@@ -19,6 +19,12 @@ const arr = ref([
   { eng: 'EVENTS', cn: '游戏活动' },
   { eng: 'FEATURES', cn: '游戏特色' },
 ])
+
+const currentIndex = ref(0)
+const changeColor = (index) => {
+  console.log(index)
+  currentIndex.value = index
+}
 </script>
 
 <style lang="scss" scoped>
@@ -66,6 +72,10 @@ const arr = ref([
   margin-top: 5px;
   border-radius: 2px;
   background-color: rgb(193, 195, 197);
-  transition: transform 0.3s ease; /* 添加过渡效果,ease 慢快慢的时间函数 */
+  transition: transform 0.3s ease; /* 添加过渡效果,ease 是 慢快慢的时间函数 */
+}
+.yellow{
+  transform: scaleY(3.5);
+  background-color: rgb(241, 165, 104);
 }
 </style>

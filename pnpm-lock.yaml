@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      vant:
+        specifier: ^4.9.18
+        version: 4.9.18(vue@3.5.13)
       vue:
         specifier: ^3.5.13
         version: 3.5.13
@@ -473,6 +476,14 @@ packages:
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
+
+  '@vant/popperjs@1.3.0':
+    resolution: {integrity: sha512-hB+czUG+aHtjhaEmCJDuXOep0YTZjdlRR+4MSmIFnkCQIxJaXLQdSsR90XWvAI2yvKUI7TCGqR8pQg2RtvkMHw==}
+
+  '@vant/use@1.6.0':
+    resolution: {integrity: sha512-PHHxeAASgiOpSmMjceweIrv2AxDZIkWXyaczksMoWvKV2YAYEhoizRuk/xFnKF+emUIi46TsQ+rvlm/t2BBCfA==}
+    peerDependencies:
+      vue: ^3.0.0
 
   '@vitejs/plugin-vue@5.2.1':
     resolution: {integrity: sha512-cxh314tzaWwOLqVes2gnnCtvBDcM1UMdn+iFR+UjAn411dPT3tOmqrJjbMd7koZpMAmBM/GqeV4n9ge7JSiJJQ==}
@@ -1000,6 +1011,11 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
+  vant@4.9.18:
+    resolution: {integrity: sha512-1bmWv/G0xz45btPqSasgv4TUdTqCneyFfnrQJ3xgerGvfTC5aP/rpO4wJb5FItCZjaSw5+9FNBj2Tz6n9TLXYA==}
+    peerDependencies:
+      vue: ^3.0.0
+
   varint@6.0.0:
     resolution: {integrity: sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg==}
 
@@ -1458,6 +1474,12 @@ snapshots:
   '@sindresorhus/merge-streams@4.0.0': {}
 
   '@types/estree@1.0.6': {}
+
+  '@vant/popperjs@1.3.0': {}
+
+  '@vant/use@1.6.0(vue@3.5.13)':
+    dependencies:
+      vue: 3.5.13
 
   '@vitejs/plugin-vue@5.2.1(vite@6.2.1(sass-embedded@1.85.1))(vue@3.5.13)':
     dependencies:
@@ -1972,6 +1994,13 @@ snapshots:
       browserslist: 4.24.4
       escalade: 3.2.0
       picocolors: 1.1.1
+
+  vant@4.9.18(vue@3.5.13):
+    dependencies:
+      '@vant/popperjs': 1.3.0
+      '@vant/use': 1.6.0(vue@3.5.13)
+      '@vue/shared': 3.5.13
+      vue: 3.5.13
 
   varint@6.0.0: {}
 

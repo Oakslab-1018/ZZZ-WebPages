@@ -33,6 +33,9 @@
           <img src="../assets//dynamic-font/pc.webp" />
         </div>
       </div>
+      <div class="next">
+        <img src="../assets/dynamic-font/downpage.webp" />
+      </div>
     </div>
     <div class="forlogin">
       <img src="../assets/login.png" />
@@ -98,8 +101,8 @@
   justify-content: space-around;
   width: 580px;
   height: 100px;
-  margin-bottom: 20px;
   margin-right: 160px;
+  margin-top: -35px;
 
   .btn {
     width: 250px;
@@ -126,7 +129,7 @@
     position: absolute;
     right: 45px;
     animation: moveUpDown 1.8s infinite;
-    animation-delay: 10ms;
+    animation-delay: 100ms;
   }
   .dn3 {
     position: absolute;
@@ -174,6 +177,40 @@
   margin-bottom: 40px;
   img {
     width: 220px;
+  }
+}
+
+.next {
+  position: relative;
+  margin-right: 160px;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  animation: fadedown 1.5s infinite;
+  img {
+    height: 15px;
+  }
+}
+
+@keyframes fadedown {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  25% {
+    opacity: 1;
+    top: 3px;
+  }
+  45%{
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    top: 6px;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
   }
 }
 </style>
