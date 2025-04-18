@@ -1,18 +1,19 @@
 <template>
   <ul class="nav">
-    <li class="nav-li" v-for="(item, index) in arr" :key="index"  @click="changeColor(index)">
+    <li class="nav-li" v-for="(item, index) in arr" :key="index" @click="changeIndex(index)">
       <div class="text">
         <p>{{ item.eng }}</p>
         <p>{{ item.cn }}</p>
       </div>
-      <div class="checkbox" :class="{yellow:currentIndex===index}"></div>
+      <div class="checkbox" :class="{ yellow: currentIndex === index }"></div>
+
     </li>
   </ul>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-const arr = ref([
+   const arr = ref([
   { eng: 'HOMEPAGE', cn: '首页' },
   { eng: 'CHARACTERS', cn: '角色介绍' },
   { eng: 'NEW CONTENT', cn: '全新内容' },
@@ -20,9 +21,12 @@ const arr = ref([
   { eng: 'FEATURES', cn: '游戏特色' },
 ])
 
-const currentIndex = ref(0)
-const changeColor = (index) => {
-  console.log(index)
+//子传父 定义触发的事件及其数据类型
+const emit = defineEmits(['update']);
+
+const currentIndex = ref(0) //当前索引
+const changeIndex = (index) => {
+  emit('update',index)
   currentIndex.value = index
 }
 </script>
@@ -74,7 +78,7 @@ const changeColor = (index) => {
   background-color: rgb(193, 195, 197);
   transition: transform 0.3s ease; /* 添加过渡效果,ease 是 慢快慢的时间函数 */
 }
-.yellow{
+.yellow {
   transform: scaleY(3.5);
   background-color: rgb(241, 165, 104);
 }

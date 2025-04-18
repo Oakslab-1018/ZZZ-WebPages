@@ -1,7 +1,7 @@
 <template>
   <div class="home-kv">
     <div class="home-kv-notice">
-      <img src="../assets/16+.png" />
+      <img src="@assets/16+.png" />
     </div>
     <div class="text1">
       <p>应用名称：《绝区零》</p>
@@ -19,26 +19,26 @@
       </a>
     </div>
     <div class="home-kv-slogan">
-      <img class="slogan-img" src="../assets/now.png" />
+      <img class="slogan-img" src="@assets/now.png" />
       <div class="buttons">
         <div id="dynamicIcon1">
-          <img src="../assets//dynamic-font/领.png" class="dn1" />
-          <img src="../assets/dynamic-font/30.png" class="dn2" />
-          <img src="../assets/dynamic-font/抽.png" class="dn3" />
-          <img src="../assets/dynamic-font/！.webp" class="dn4" />
+          <img src="@assets//dynamic-font/领.png" class="dn1" />
+          <img src="@assets/dynamic-font/30.png" class="dn2" />
+          <img src="@assets/dynamic-font/抽.png" class="dn3" />
+          <img src="@assets/dynamic-font/！.webp" class="dn4" />
         </div>
-        <img src="../assets/buttons/download.webp" class="btn" />
-        <img src="../assets/buttons/cloud.webp" class="btn" />
+        <img src="@assets/buttons/download.webp" class="btn" />
+        <img src="@assets/buttons/cloud.webp" class="btn" />
         <div id="dynamicIcon2">
-          <img src="../assets//dynamic-font/pc.webp" />
+          <img src="@assets//dynamic-font/pc.webp" />
         </div>
       </div>
       <div class="next">
-        <img src="../assets/dynamic-font/downpage.webp" />
+        <img src="@assets/dynamic-font/downpage.webp" />
       </div>
     </div>
     <div class="forlogin">
-      <img src="../assets/login.png" />
+      <img src="@assets/login.png" />
     </div>
   </div>
 </template>
@@ -201,7 +201,7 @@
     opacity: 1;
     top: 3px;
   }
-  45%{
+  45% {
     opacity: 1;
   }
   50% {

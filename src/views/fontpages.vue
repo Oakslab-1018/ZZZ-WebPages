@@ -1,21 +1,50 @@
 <template>
-  <video id="bc-video" loop autoplay muted>
-    <source src="../assets/vedio1.mp4" />
-  </video>
   <fixlogo />
-  <changerouter class="nav" />
+  <changerouter class="nav" @update="update" />
   <icontool class="tool" />
-  <homekv />
+
+  <div v-if="currentIndex == 0">
+    <video id="bc-video" loop autoplay muted>
+      <source src="@assets/vedio1.mp4" />
+    </video>
+    <homekv />
+  </div>
+
+  <div v-if="currentIndex == 1"><second-page /></div>
+
+  <div v-if="currentIndex == 2"><third-page /></div>
+
+  <div v-if="currentIndex == 3"><forth-page /></div>
+
+  <div v-if="currentIndex == 4"><last-page /></div>
 </template>
 
 <script setup>
-import icontool from '../components/icontool.vue'
-import homekv from '../components/homekv.vue'
-import fixlogo from '../components/fix-logo.vue'
-import changerouter from '../components/change-router.vue'
+import { ref } from 'vue'
+import icontool from '@always/icontool.vue'
+import homekv from '@firstpage/homekv.vue'
+import fixlogo from '@always/fix-logo.vue'
+import changerouter from '@always/change-router.vue'
+import secondPage from './secondPage.vue'
+import thirdPage from './thirdPage.vue'
+import forthPage from './forthPage.vue'
+import lastPage from './lastPage.vue'
+
+const currentIndex = ref(0)
+const update = (data) => {
+  console.log(data)
+
+  currentIndex.value = data
+}
 </script>
 
 <style lang="scss" scoped>
+.swipe .van-swipe-item {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
 #bc-video {
   position: absolute;
   top: 0;

@@ -1,6 +1,6 @@
 <template>
   <div class="fix-logo">
-    <img src="../assets/fix-logo.png" />
+    <img src="@assets/fix-logo.png" />
   </div>
 </template>
 
