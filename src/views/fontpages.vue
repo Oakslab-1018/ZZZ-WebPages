@@ -57,12 +57,13 @@ const update = (data) => {
 }
 .tool {
   position: fixed;
-  padding-top: 30px;
-  padding-left: 1300px;
+  top: 45px;
+  right: 100px;
   z-index: 3;
 }
 .nav {
   position: fixed;
+  z-index: 3;
   margin-top: 380px;
   margin-left: 1370px;
 }

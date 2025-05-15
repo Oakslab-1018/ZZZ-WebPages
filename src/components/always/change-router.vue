@@ -6,14 +6,13 @@
         <p>{{ item.cn }}</p>
       </div>
       <div class="checkbox" :class="{ yellow: currentIndex === index }"></div>
-
     </li>
   </ul>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-   const arr = ref([
+const arr = ref([
   { eng: 'HOMEPAGE', cn: '首页' },
   { eng: 'CHARACTERS', cn: '角色介绍' },
   { eng: 'NEW CONTENT', cn: '全新内容' },
@@ -22,29 +21,30 @@ import { ref } from 'vue'
 ])
 
 //子传父 定义触发的事件及其数据类型
-const emit = defineEmits(['update']);
+const emit = defineEmits(['update'])
 
 const currentIndex = ref(0) //当前索引
 const changeIndex = (index) => {
-  emit('update',index)
+  emit('update', index)
   currentIndex.value = index
 }
 </script>
 
 <style lang="scss" scoped>
 .nav {
+  position: absolute;
+  left: 250px;
+  top: -20px;
   display: flex;
   flex-direction: column;
-  z-index: 3;
-  height: 100vh;
+  height: 300px;
 }
 .nav-li {
   cursor: pointer;
   display: flex;
   justify-content: end;
-  width: 200px;
-  margin-top: 3px;
-  // outline: auto white;
+  width: 120px;
+  margin-bottom: 10px;
 }
 .nav-li:hover {
   .checkbox {
@@ -52,7 +52,7 @@ const changeIndex = (index) => {
   }
   .text {
     opacity: 1;
-    transform: translateX(-10%);
+    transform: translateX(-15px);
   }
 }
 .text {

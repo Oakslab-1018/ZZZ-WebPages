@@ -11,7 +11,7 @@
   padding-left: 100px;
   z-index: 3;
   img {
-    width: 90px;
+    width: 110px;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <img src="@assets/secondPage/backgnd.webp">
+    
   </div>
 </template>
 
@@ -10,8 +10,10 @@
 
 <style lang="scss" scoped>
 .body {
+  position: fixed;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
+  z-index: -1; 
+  background-image: url("@assets/thirdPage/kv-painting/back.webp");
 }
-
 </style>
