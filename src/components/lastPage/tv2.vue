@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref,onMounted,onUnmounted } from 'vue'
 
 const images = [
   {
@@ -66,6 +66,7 @@ const images = [
 
 const currentIndex = ref(0)
 const dynamicstyle = ref('')
+let interval = null
 
 const setStyle = () => {
   dynamicstyle.value = `translateX(-${currentIndex.value * 100}%)`
@@ -78,6 +79,18 @@ const prevSlide = () => {
   currentIndex.value = (currentIndex.value - 1 + images.length) % images.length
   setStyle()
 }
+const startSlideshow = () => {
+  interval = setInterval(() => {
+    nextSlide()
+  }, 2000)
+}
+onMounted(() => {
+  if (interval) clearInterval(interval)
+  startSlideshow()
+})
+onUnmounted(() => {
+  if (interval) clearInterval(interval)
+})
 </script>
 
 <style lang="scss" scoped>

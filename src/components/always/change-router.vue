@@ -20,7 +20,6 @@ const arr = ref([
   { eng: 'FEATURES', cn: '游戏特色' },
 ])
 
-//子传父 定义触发的事件及其数据类型
 const emit = defineEmits(['update'])
 
 const currentIndex = ref(0) //当前索引

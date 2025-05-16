@@ -32,8 +32,6 @@ import lastPage from './lastPage.vue'
 
 const currentIndex = ref(0)
 const update = (data) => {
-  console.log(data)
-
   currentIndex.value = data
 }
 </script>
