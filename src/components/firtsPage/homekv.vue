@@ -5,7 +5,7 @@
     </div>
     <div class="text1">
       <p>应用名称：《绝区零》</p>
-      <p>当前版本：1.5.0</p>
+      <p>当前版本：1.7.0</p>
       <a href="https://zzz.mihoyo.com/company/privacy">
         <u style="color: white">隐私协议</u>
       </a>
@@ -13,7 +13,7 @@
     </div>
     <div class="text2">
       <p>开发者名称：上海交宅科技有限公司</p>
-      <p>更新时间：2025.01.22</p>
+      <p>更新时间：2025.04.23</p>
       <a href="https://zzz.mihoyo.com/news/124331">
         <u style="color: white">产品功能及用户数据</u>
       </a>
@@ -92,6 +92,8 @@
   z-index: 1;
 }
 .slogan-img {
+  margin-right: 120px;
+  margin-bottom: 20px;
   width: 800px;
 }
 

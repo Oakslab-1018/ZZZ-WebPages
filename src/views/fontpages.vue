@@ -5,7 +5,7 @@
 
   <div v-if="currentIndex == 0">
     <video id="bc-video" loop autoplay muted>
-      <source src="@assets/vedio1.mp4" />
+      <source src="@assets/video2.mp4" />
     </video>
     <homekv />
   </div>

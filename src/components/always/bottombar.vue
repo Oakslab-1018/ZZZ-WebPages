@@ -19,14 +19,14 @@
   }
   100% {
     transform: translateX(0);
-  } /* 向右移动自身宽度 */
+  }
 }
 
 .bar {
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 140px;
+  height: 160px;
   z-index: 1;
   background: linear-gradient(150deg, #ADE9FE 0%, #786AFE 83%);
   img {
@@ -35,25 +35,24 @@
     left: 150px;
     top: 15px;
     width: 80%;
-    height: 110px;
+    height: 130px;
   }
 }
 .scroll-container {
   display: flex;
   position: absolute;
-  bottom: 8px;
+  bottom: 22px;
   left: 0;
   width: 100%;
   height: 140px;
 }
 .scroller {
-  display: flex; /* 横向排列图片 */
+  display: flex; 
   animation: scroll 10s linear infinite;
-  width: 200%; /* 两倍图片宽度 */
+  width: 200%; 
   img {
-  width: 100%; /* 每张图片占容器一半 */
+  width: 100%;
   height: auto;
-  object-fit: cover; /* 保持图片比例 */
 }
 }
 </style>

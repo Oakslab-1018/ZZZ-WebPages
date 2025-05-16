@@ -1,26 +1,39 @@
 <template>
   <div class="box">
     <div class="txt">
-      <p class="txt1">全新放送</p>
-      <p class="txt2">活动期间，参与签到即得「加密母带」*10！</p>
+      <p class="txt1" v-for="(item, index) in images" v-show="index == currentIndex">
+        {{ item.head }}
+      </p>
+      <p
+        class="txt2"
+        v-for="(item, index) in images"
+        v-show="index == currentIndex"
+        style="white-space: pre-line"
+      >
+        {{ item.txt }}
+      </p>
     </div>
     <div class="tv">
-      <ul class="container">
-        <li v-for="(item, index) in images" class="pic" v-show="index == 0">
-          <img :src="item.img" />
-        </li>
-      </ul>
+      <div class="container">
+        <img
+          v-for="(item, index) in images"
+          class="pic"
+          :key="index"
+          :src="item.img"
+          :style="{ left: index * 100 + '%', transform: dynamicstyle }"
+        />
+      </div>
       <div class="change">
-        <div class="last"></div>
-        <div class="next"></div>
+        <div class="last" @click="prevSlide"></div>
+        <div class="next" @click="nextSlide"></div>
       </div>
     </div>
-    <bottombar />
   </div>
 </template>
 
 <script setup>
-import bottombar from '../always/bottombar.vue'
+import { ref } from 'vue'
+
 const images = [
   {
     img: 'src/assets/forthPage/pic1.png',
@@ -28,25 +41,39 @@ const images = [
     txt: '活动期间，参与签到即得「加密母带」*10！',
   },
   {
-    img: 'src/assets/forthPage/pic3.png',
+    img: 'src/assets/forthPage/pic2.png',
     head: '嗯呢从天降',
     txt: '活动期间，参与签到即得「邦布券」*10！',
   },
   {
-    img: 'src/assets/forthPage/pic4.png',
+    img: 'src/assets/forthPage/pic3.png',
     head: '花语未名之言',
-    txt: '活动期间，参与签到即得「加密母带」*10！',
+    txt: '未曾言说的话，或许可以用一束被朝露点缀的鲜花表达。\n但请注意：为免误解，请谨慎选择花艺师。',
   },
   {
-    img: 'src/assets/forthPage/pic2.png',
+    img: 'src/assets/forthPage/pic4.png',
     head: '邦邦冲冲冲',
-    txt: '活动期间，参与签到即得「加密母带」*10！',
+    txt: '「玛瑟尔大冒险」段位赛开始啦！\n带上小邦布，挤掉对手往前冲~',
   },
 ]
+
+const currentIndex = ref(0)
+const dynamicstyle = ref('')
+
+const setStyle = () => {
+  dynamicstyle.value = `translateX(-${currentIndex.value * 100}%)`
+}
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % images.length
+  setStyle()
+}
+const prevSlide = () => {
+  currentIndex.value = (currentIndex.value - 1 + images.length) % images.length
+  setStyle()
+}
 </script>
 
 <style lang="scss" scoped>
-//字体出现动画
 @keyframes smoothAppear {
   100% {
     opacity: 1;
@@ -59,10 +86,10 @@ const images = [
   height: 100%;
 }
 .txt {
+  position: absolute;
+  overflow: hidden;
   margin-left: 130px;
   margin-top: 200px;
-  display: flex;
-  flex-direction: column;
   width: 600px;
   height: 500px;
   opacity: 0;
@@ -70,6 +97,7 @@ const images = [
   animation: smoothAppear 1s cubic-bezier(0.3, 0.9, 0.5, 1.2) forwards;
 }
 .txt1 {
+  position: absolute;
   font-weight: 1000;
   font-size: 4vw;
   margin-bottom: 30px;
@@ -79,7 +107,8 @@ const images = [
   color: transparent; /* 隐藏原有文字颜色 */
 }
 .txt2 {
-  margin: 0;
+  position: absolute;
+  margin-top: 230px;
   color: rgb(158, 158, 158);
   letter-spacing: -1px;
   font-family: Microsoft JhengHei;
@@ -90,7 +119,7 @@ const images = [
 .tv {
   position: absolute;
   left: 750px;
-  top: 250px;
+  top: 200px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -132,26 +161,20 @@ const images = [
   background-repeat: no-repeat;
 }
 .container {
-  width: 740px;
-  height: 370px;
   position: relative;
+  overflow: hidden;
+  width: 740px;
+  height: 375px;
   right: 40px;
-  bottom: 40px;
+  bottom: 35px;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  list-style: none;
-  display: flex;
 }
 .pic {
-  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  padding: 0;
-  img {
-    width: 100%;
-    height: 100%;
-  }
+  display: inline-block;
+  position: absolute;
+  transition: 0.5s transform ease-in-out;
 }
 </style>

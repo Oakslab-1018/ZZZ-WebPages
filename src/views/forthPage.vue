@@ -2,10 +2,12 @@
   <div class="back">
     <tv />
   </div>
+  <bottombar2 />
 </template>
 
 <script setup>
 import tv from '@/components/forthPage/tv.vue'
+import bottombar2 from '@/components/thirdPage/bottombar2.vue'
 </script>
 
 <style lang="scss" scoped>

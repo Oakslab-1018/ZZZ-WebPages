@@ -1,15 +1,17 @@
 <template>
-  <div class="body">
-    
+  <div class="back">
+    <tv2 />
+    <bottombar3 />
   </div>
 </template>
 
 <script setup>
-
+import tv2 from '@/components/lastPage/tv2.vue';
+import bottombar3 from '@/components/lastPage/bottombar3.vue';
 </script>
 
 <style lang="scss" scoped>
-.body {
+.back {
   position: fixed;
   width: 100vw;
   height: 100vh;

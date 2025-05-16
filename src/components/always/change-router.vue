@@ -76,10 +76,10 @@ const changeIndex = (index) => {
   margin-top: 5px;
   border-radius: 2px;
   background-color: rgb(193, 195, 197);
-  transition: transform 0.3s ease; /* 添加过渡效果,ease 是 慢快慢的时间函数 */
+  transition: transform 0.3s ease;
 }
 .yellow {
   transform: scaleY(3.5);
-  background-color: rgb(241, 165, 104);
+  background-color: rgb(241, 7, 70);
 }
 </style>

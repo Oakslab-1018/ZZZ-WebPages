@@ -8,7 +8,6 @@
     </div>
     <div class="music" v-if="havemusic" @click="changemusic">
       <img src="@assets/icon-tool/music.png" />
-      <audio src="@assets/audio/bgm.mp3" loop autoplay v-if="havemusic"></audio>
     </div>
     <div v-else @click="changemusic">
       <img src="@assets/icon-tool/no-music.png" />
@@ -23,12 +22,22 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 const havemusic = ref(true)
-
+const music = new Audio()
+onMounted(() => {
+  setTimeout(() => {
+    music.src = 'src/assets/audio/bgm.mp3'
+    music.play()
+  }, 3000)
+})
 const changemusic = () => {
   havemusic.value = !havemusic.value
-  console.log(havemusic.value)
+  if (havemusic.value) {
+    music.play()
+  } else {
+    music.pause()
+  }
 }
 </script>
 
