@@ -39,7 +39,7 @@ import bottombar from '@/components/always/bottombar.vue'
   z-index: -1;
   background-image: url('@assets/secondPage/vvaback.webp');
   background-size: cover;
-  background-position: -200px 0px; //偏移一下背景
+  background-position: -200px 0px;
 
   .txt {
     position: relative;
@@ -60,8 +60,8 @@ import bottombar from '@/components/always/bottombar.vue'
     font-weight: 550;
     font-size: 2vw;
     background: linear-gradient(150deg, #797979 0%, #ffffff 53%);
-    background-clip: text; /* 关键：将背景裁剪为文字形状 */
-    color: transparent; /* 隐藏原有文字颜色 */
+    background-clip: text;
+    color: transparent;
   }
   .txt2 {
     margin-top: 0;
@@ -70,8 +70,8 @@ import bottombar from '@/components/always/bottombar.vue'
     margin-bottom: 30px;
     letter-spacing: 5px;
     background: linear-gradient(150deg, #797979 0%, #ffffff 43%);
-    background-clip: text; /* 关键：将背景裁剪为文字形状 */
-    color: transparent; /* 隐藏原有文字颜色 */
+    background-clip: text;
+    color: transparent;
   }
 
   .dynamic-font {

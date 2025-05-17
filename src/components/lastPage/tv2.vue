@@ -128,8 +128,8 @@ onUnmounted(() => {
   font-weight: 1000;
   font-size: 6.2vw;
   background: linear-gradient(150deg, #f8a44e 0%, #f8be4e 83%);
-  background-clip: text; /* 关键：将背景裁剪为文字形状 */
-  color: transparent; /* 隐藏原有文字颜色 */
+  background-clip: text;
+  color: transparent; 
 }
 .eng {
   position: relative;

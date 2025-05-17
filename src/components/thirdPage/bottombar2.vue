@@ -19,7 +19,7 @@
   }
   100% {
     transform: translateX(0);
-  } /* 向右移动自身宽度 */
+  }
 }
 
 .bar {
@@ -47,13 +47,13 @@
   height: 140px;
 }
 .scroller {
-  display: flex; /* 横向排列图片 */
+  display: flex; 
   animation: scroll 10s linear infinite;
-  width: 200%; /* 两倍图片宽度 */
+  width: 200%;
   img {
-    width: 100%; /* 每张图片占容器一半 */
+    width: 100%; 
     height: auto;
-    object-fit: cover; /* 保持图片比例 */
+    object-fit: cover;
   }
 }
 </style>

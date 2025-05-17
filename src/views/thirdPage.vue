@@ -54,8 +54,8 @@ import bottombar2 from '@/components/thirdPage/bottombar2.vue';
   font-weight: 900;
   font-size: 2.1vw;
   background: linear-gradient(150deg, #797979 0%, #ffffff 53%);
-  background-clip: text; /* 关键：将背景裁剪为文字形状 */
-  color: transparent; /* 隐藏原有文字颜色 */
+  background-clip: text; 
+  color: transparent; 
   opacity: 0;
   transform: translateY(20px);
   animation: smoothAppearY 0.7s cubic-bezier(0.3, 0.9, 0.5, 1) forwards;

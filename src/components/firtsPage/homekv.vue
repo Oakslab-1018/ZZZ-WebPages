@@ -148,7 +148,6 @@
 }
 
 @keyframes moveUpDown {
-  //利用关键帧技术实现动画
   0% {
     top: 6px;
   }
